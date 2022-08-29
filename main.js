@@ -1,5 +1,6 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('path');
+const { userSelectFile } = require("./dialogWindow");
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -20,10 +21,6 @@ const createWindow = () => {
 app.whenReady().then(() => {
     createWindow();
 
-    ipcMain.handle('dialog', (event, method, params) => {
-        dialog[method](params);
-    });
-
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
     });
@@ -32,3 +29,9 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
 });
+
+ipcMain.handle("select-file-popup", async (handler, args) => {
+    const popupResults = await userSelectFile();
+
+    return popupResults;
+})
