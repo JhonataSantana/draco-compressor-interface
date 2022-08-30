@@ -11,16 +11,35 @@
 
 <body>
 
-    <main>
-        <nav>
+    <main class="dropzone">
+        <div class="main">
             <section>
-                <h1>Draco Compressor</h1>
-                <button class="file-picker">Selecione o modelo 3D ou arraste até aqui</button>
-                <span class="file-path">Nenhum arquivo selecionado</span>
-                <button class="compression-start v-hidden">Comprimir para Draco</button>
-                <span class="message v-hidden">message</span>
+                <header class="flex row">
+                    <h1>Draco Compressor</h1>
+                </header>
+                <nav class="flex column">
+                    <div class="flex column mw50">
+                        <h4 class="mb16">Arraste e solte o arquivo aqui</h4>
+                        <span class="menor mb16">ou</span>
+                        <div class="file-picker mb16 emerald-button">Selecionar</div>
+                    </div>
+                    <div class="flex column mw50 mb24">
+                        <h4 class="file-path">Nenhum arquivo selecionado</h4>
+                    </div>
+                </nav>
+                <nav class="flex column">
+                    <div class="compression-start v-hidden emerald-button">Comprimir</div>
+                </nav>
+                <section class="flex column">
+                    <span class="message v-hidden">message</span>
+                </section>
             </section>
-        </nav>
+        </div>
+
+        <div class="drop-message">
+            <span>Solte o arquivo</span>
+        </div>
+
     </main>
 
     <script src="./renderer/renderer.js" defer></script>
