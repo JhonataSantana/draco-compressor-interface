@@ -34,6 +34,11 @@ table {
 }
 
 /* Init CSS */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     overflow: hidden;
 }
@@ -46,23 +51,14 @@ main {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: url("./../assets/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #FFF;
 }
 
 nav {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 48px 24px;
     width: 100%;
     box-sizing: border-box;
     height: calc(100vh - 64px);
-    color: #FFF;
     display: flex;
     align-items: center;
 }
@@ -72,4 +68,8 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.v-hidden{
+    visibility: hidden;
 }

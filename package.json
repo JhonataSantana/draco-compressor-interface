@@ -20,7 +20,8 @@
     "electron": "^20.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "gltf-pipeline": "^3.0.5"
   },
   "config": {
     "forge": {
